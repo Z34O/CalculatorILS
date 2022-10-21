@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+    </head>
+    <body>
+        <div id="bg">
+            <a href="https://github.com/Z34O" target="_blank">
+                <img id="github-logo" src="assets/github.png" width="32" height="30" />
+            </A>
+        </div>
+
+        <div class="card-border">
+            <div class="card">
+                <div id="result-box"><br/>
+                    <bdi id="result"></bdi><br/><br/>
+                    <sup id="foresee-result"></sup>
+                </div>
+
+                <table id="calculator" border="0">
+                    </tr>
+                    <tr>
+                        <td class="key"> ( </td>
+                        <td class="key"> ) </td>
+                        <td onclick="_clear()"> C </td>
+                        <td onclick="_del()"> <img src="assets/backspace.png" /> </td>
+                        <td onclick="_calc()" rowspan="5"> = </td>
+                    </tr>
+                    <tr>
+                        <td class="key"> 7 </td>
+                        <td class="key"> 8 </td>
+                        <td class="key"> 9 </td>
+                        <td class="key"> ÷ </td>
+                    </tr>
+                    <tr>
+                        <td class="key"> 4 </td>
+                        <td class="key"> 5 </td>
+                        <td class="key"> 6 </td>
+                        <td class="key"> × </td>
+                    </tr>
+                    <tr>
+                        <td class="key"> 1 </td>
+                        <td class="key"> 2 </td>
+                        <td class="key"> 3 </td>
+                        <td class="key"> - </td>
+                    </tr>
+                    <tr>
+                        <td class="key" colspan="2"> 0 </td>
+                        <td class="key"> . </td>
+                        <td class="key"> + </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </body>
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="libs/particles.js"></script>
+    <script src="libs/jquery.js"></script>
+    <script src="calculator.js"></script>
+</html>

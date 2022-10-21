@@ -1,0 +1,104 @@
+body {
+    background-color: #333333;
+    height: 100vh;
+    font-family: dogica;
+    color: aliceblue;
+    letter-spacing: -8px;
+
+    /* No select */
+    user-select: none;
+    -webkit-user-drag: none;
+
+    overflow: hidden;
+}
+
+#bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.card-border {
+    position: relative;
+    /* Center our card with some Math (top: (totalH - cardH) / 2 & left: (totalW - cardW) / 2) */
+    top: 5%;
+    left: 35%;
+    height: 90%;
+    width: 30%;
+
+    /* Emulate RGB */
+    background: linear-gradient(red, violet, dodgerblue, yellow);
+    background-size: 200% 200%;
+    box-shadow: 5px 5px 10px #222222;
+    animation: move 5s ease infinite;
+
+    overflow: hidden; /* Doesn't mess up the keys when user have ridiculously small width screens */
+}
+
+.card {
+    /* Center relative to the border and remove margins and padding */
+    position: relative;
+    padding: 0px;
+    margin: 0px;
+    top: 2px;
+    left: 2px;
+
+    height: calc(100% - 4px);
+    width: calc(100% - 4px);
+    background-color: #333333;
+}
+
+/* Animation for the RGB */
+@keyframes move {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.card #calculator {
+    width: 100%;
+    height: 80%;
+    font-size: 200%;
+    color: grey;
+    text-align: center;
+}
+
+#result-box {
+    height: 20%;
+    text-align: right;
+    font-size: 30px;
+    padding: 10px;
+
+    cursor: grab;
+    overflow: auto;
+    direction: rtl;
+
+    /* Only hiding the scrollbar, we do not want to lose its functionality */
+    scrollbar-width: none;
+}
+
+#result-box::-webkit-scrollbar {
+    display: none;
+}
+
+#foresee-result {
+    color:lightslategray;
+    font-size: 80%;
+}
+
+#github-logo {
+    position: absolute;
+    bottom: 3%;
+    right: 1%;
+}
+
+@font-face {
+    font-family: dogica;
+    src: url("assets/dogica.ttf");
+}
