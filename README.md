@@ -1,3 +1,3 @@
 # calkyuu
 
-## A modern calculator made for a school project
+A modern design calculator made for a school project
