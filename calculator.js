@@ -15,7 +15,7 @@ let keyClick = (keyValue) => {
     }
 
     // Two or more decimal points next to each other is invalid, only allow one
-    if(keyValue == "." && equation.slice(0) == ".") {
+    if(keyValue == "." && equation.slice(-1) == ".") {
         return
     }
 
@@ -64,12 +64,18 @@ let _calc = () => {
 let foresee = () => {
     let foreseenResult = cleanSolve(equation);
     document.getElementById("foresee-result").innerHTML = foreseenResult ? foreseenResult : "";
+
+    console.log(equation)
 }
 
 // Construct JS valid expressions
 let cleanSolve = (dirtyEquation) => {
     return (eval(dirtyEquation.replace("÷", "/")
-                              .replace("×", "*"))).toString();
+                              .replace("×", "*")
+                              .replace("sin", "Math.sin")
+                              .replace("cos", "Math.cos")
+                              .replace("tan", "Math.tan")
+                              .replace("π", "Math.PI")).toString());
 }
 
 

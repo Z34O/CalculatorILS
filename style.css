@@ -92,6 +92,11 @@ body {
     font-size: 80%;
 }
 
+.key:hover {
+    transform: scale(1.2, 1.2);
+    color: white;
+}
+
 #github-logo {
     position: absolute;
     bottom: 3%;
