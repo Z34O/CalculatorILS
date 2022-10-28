@@ -2,4 +2,4 @@
 
 A modern design calculator made for a school project
 
-Hosted [here!](https://z34o.github.io/CalculatorILS)
+Hosted [here!](https://brylle.github.io/CalculatorILS)
